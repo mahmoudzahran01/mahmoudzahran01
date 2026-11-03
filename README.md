@@ -24,7 +24,7 @@ Currently **Software Engineer (AI) at [Qubit](https://qubit.sa)** (KAUST TAQADAM
 |---|---|
 | **Bilingual text-to-SQL model** — QLoRA distillation of two larger teachers into a 4B model, synthetic pairs kept only when both teachers' SQL returned the same rows | Execution accuracy **56% → 86%**, eight significance-tested ablations, 2.5 GB INT4 build with no accuracy loss |
 | **LLM inference and GPU serving** — vLLM on GPU Kubernetes (Helm, device plugin), OpenTelemetry tracing, SLO alerts | Prefix caching **13x** faster first token, speculative decoding **2.2x**, INT4 **3x** smaller and faster |
-| **Arabic–English retrieval and RAG evaluation** — 31k-query benchmark from public data, fine-tuned embedder and reranker, calibrated LLM judges | Arabic→English MRR@10 **41 → 72**; judge agreement κ **0.42 → 0.97** |
+| **[Arabic–English retrieval and RAG evaluation](https://github.com/mahmoudzahran01/arabic-english-retrieval-eval)** — 31k-query benchmark from public data, fine-tuned [embedder](https://huggingface.co/mzahran1/arabic-english-e5-small-retrieval) and [reranker](https://huggingface.co/mzahran1/arabic-english-reranker-mminilm) on Hugging Face, calibrated LLM judges | Arabic→English MRR@10 **41 → 72**; judge agreement κ **0.42 → 0.97** |
 
 #### Research
 
