@@ -24,7 +24,11 @@ Currently **Software Engineer (AI) at [Qubit](https://qubit.sa)** (KAUST TAQADAM
 |---|---|
 | **Bilingual text-to-SQL model** — QLoRA distillation of two larger teachers into a 4B model, synthetic pairs kept only when both teachers' SQL returned the same rows | Execution accuracy **56% → 86%**, eight significance-tested ablations, 2.5 GB INT4 build with no accuracy loss |
 | **LLM inference and GPU serving** — vLLM on GPU Kubernetes (Helm, device plugin), OpenTelemetry tracing, SLO alerts | Prefix caching **13x** faster first token, speculative decoding **2.2x**, INT4 **3x** smaller and faster |
-| **[Arabic–English retrieval and RAG evaluation](https://github.com/mahmoudzahran01/arabic-english-retrieval-eval)** — 31k-query benchmark from public data, fine-tuned [embedder](https://huggingface.co/mzahran1/arabic-english-e5-small-retrieval) and [reranker](https://huggingface.co/mzahran1/arabic-english-reranker-mminilm) on Hugging Face, calibrated LLM judges | Arabic→English MRR@10 **41 → 72**; judge agreement κ **0.42 → 0.97** |
+| **[Arabic–English retrieval models](https://github.com/mahmoudzahran01/arabic-english-retrieval-eval)** — fine-tuned bge-m3 and distilled [e5-base](https://huggingface.co/mzahran1/arabic-english-e5-base-retrieval) / [e5-small](https://huggingface.co/mzahran1/arabic-english-e5-small-retrieval-v2) embedders ([v2-m3](https://huggingface.co/mzahran1/arabic-english-bge-m3-retrieval)), a [reranker](https://huggingface.co/mzahran1/arabic-english-reranker-mminilm), calibrated LLM judges, pre-registered model selection, contamination audit, [technical report](https://github.com/mahmoudzahran01/arabic-english-retrieval-eval/blob/main/report/main.pdf) | Arabic→English MRR@10 **63 → 71** over bge-m3 (5 seeds); small models **+17 to +18** over their base; highest ≤300M score among 10 models on a 19-task Arabic benchmark; LLM-judge agreement κ **0.42 → 0.97** |
+
+#### Open source
+
+- **MTEB** (the standard embedding leaderboard): proposed **MTEB(ara)**, a 19-task Arabic benchmark built from a review of all 103 Arabic tasks ([issue #5845](https://github.com/embeddings-benchmark/mteb/issues/5845)); model metadata PR ([#5846](https://github.com/embeddings-benchmark/mteb/pull/5846)); found broken qrels in MLQA ara-deu and that 89% of MIRACL-Arabic dev queries are copies of TyDi-QA train questions.
 
 #### Research
 
