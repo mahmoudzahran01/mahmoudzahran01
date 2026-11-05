@@ -16,14 +16,14 @@ Currently **Software Engineer (AI) at [Qubit](https://qubit.sa)** (KAUST TAQADAM
 - **Grounding** — a fact-check layer that re-runs live SQL behind every figure in a generated report.
 - **Agentic workflows** — an automation engine with loops, branches, HTTP nodes, run budgets and streaming; tests grown from 19 to 264.
 
-*Production code is proprietary. The projects below rebuild the same problems on public data.*
+*Production code is proprietary. The projects below are public; where an evaluation set is private, the repo says so.*
 
 #### Projects
 
 | Project | Result |
 |---|---|
-| **Bilingual text-to-SQL model** — QLoRA distillation of two larger teachers into a 4B model, synthetic pairs kept only when both teachers' SQL returned the same rows | Execution accuracy **56% → 86%**, eight significance-tested ablations, 2.5 GB INT4 build with no accuracy loss |
-| **LLM inference and GPU serving** — vLLM on GPU Kubernetes (Helm, device plugin), OpenTelemetry tracing, SLO alerts | Prefix caching **13x** faster first token, speculative decoding **2.2x**, INT4 **3x** smaller and faster |
+| **[Bilingual text-to-SQL model](https://github.com/mahmoudzahran01/bilingual-text-to-sql)** — QLoRA distillation of two larger teachers into a 4B model, synthetic pairs kept only when both teachers' SQL returned the same rows | Execution accuracy **56% → 86%**, eight significance-tested ablations, 2.5 GB INT4 build with no accuracy loss |
+| **[LLM inference and GPU serving](https://github.com/mahmoudzahran01/llm-gpu-serving)** — vLLM on GPU Kubernetes (Helm, device plugin), OpenTelemetry tracing, SLO alerts | Prefix caching **13x** faster first token, speculative decoding **2.2x**, INT4 **3x** smaller and faster |
 | **[Arabic–English retrieval models](https://github.com/mahmoudzahran01/arabic-english-retrieval-eval)** — fine-tuned bge-m3 and distilled [e5-base](https://huggingface.co/mzahran1/arabic-english-e5-base-retrieval) / [e5-small](https://huggingface.co/mzahran1/arabic-english-e5-small-retrieval-v2) embedders ([v2-m3](https://huggingface.co/mzahran1/arabic-english-bge-m3-retrieval)), a [reranker](https://huggingface.co/mzahran1/arabic-english-reranker-mminilm), calibrated LLM judges, pre-registered model selection, contamination audit, [technical report](https://github.com/mahmoudzahran01/arabic-english-retrieval-eval/blob/main/report/main.pdf) | Arabic→English MRR@10 **63 → 71** over bge-m3 (5 seeds); small models **+17 to +18** over their base; highest ≤300M score among 10 models on a 19-task Arabic benchmark; LLM-judge agreement κ **0.42 → 0.97** |
 
 #### Open source
