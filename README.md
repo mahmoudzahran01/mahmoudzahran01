@@ -28,7 +28,7 @@ Currently **Software Engineer (AI) at [Qubit](https://qubit.sa)** (KAUST TAQADAM
 
 #### Open source
 
-- **MTEB** (the standard embedding leaderboard): proposed **MTEB(ara)**, a 19-task Arabic benchmark built from a review of all 103 Arabic tasks ([issue #5845](https://github.com/embeddings-benchmark/mteb/issues/5845)); model metadata PR ([#5846](https://github.com/embeddings-benchmark/mteb/pull/5846)); found broken qrels in MLQA ara-deu and that 89% of MIRACL-Arabic dev queries are copies of TyDi-QA train questions.
+- **MTEB** (the standard embedding leaderboard): proposed **MTEB(ara)**, a 19-task Arabic benchmark built from a review of all 103 Arabic tasks ([issue #5845](https://github.com/embeddings-benchmark/mteb/issues/5845)); model registered in MTEB (PR [#5846](https://github.com/embeddings-benchmark/mteb/pull/5846), merged); found broken qrels in MLQA ara-deu and that 89% of MIRACL-Arabic dev queries are copies of TyDi-QA train questions.
 
 #### Research
 
