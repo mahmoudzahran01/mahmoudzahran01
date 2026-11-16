@@ -28,7 +28,8 @@ Currently **Software Engineer (AI) at [Qubit](https://qubit.sa)** (KAUST TAQADAM
 
 #### Open source
 
-- **MTEB** (the standard embedding leaderboard): proposed **MTEB(ara)**, a 19-task Arabic benchmark built from a review of all 103 Arabic tasks ([issue #5845](https://github.com/embeddings-benchmark/mteb/issues/5845)); model registered in MTEB (PR [#5846](https://github.com/embeddings-benchmark/mteb/pull/5846), merged); found broken qrels in MLQA ara-deu and that 89% of MIRACL-Arabic dev queries are copies of TyDi-QA train questions.
+- **MTEB** (the standard embedding leaderboard): opened **MTEB(ara)**, a 19-task Arabic benchmark built from a review of 103 Arabic tasks ([proposal](https://github.com/embeddings-benchmark/mteb/issues/5845), [PR #5904](https://github.com/embeddings-benchmark/mteb/pull/5904), [results](https://github.com/embeddings-benchmark/results/pull/845)); four models registered (PRs [#5846](https://github.com/embeddings-benchmark/mteb/pull/5846), [#5899](https://github.com/embeddings-benchmark/mteb/pull/5899), merged); found broken qrels in MLQA ara-deu, duplicated passages in SadeemQuestionRetrieval ([#5903](https://github.com/embeddings-benchmark/mteb/issues/5903)), and that 89% of MIRACL-Arabic dev queries are copies of TyDi-QA train questions.
+- **llm-compressor** (vLLM): [research entry](https://github.com/vllm-project/llm-compressor/pull/3522) (merged) on whether calibration language matters when quantizing Qwen3-8B for Arabic (W4A16, NVFP4, FP8): no measurable effect; the calibration draw moved accuracy more than the language. **compressed-tensors**: fix for asymmetric INT4 checkpoints failing to load ([PR #1020](https://github.com/vllm-project/compressed-tensors/pull/1020), approved).
 
 #### Research
 
